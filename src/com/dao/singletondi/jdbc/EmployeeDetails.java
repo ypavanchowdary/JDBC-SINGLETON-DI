@@ -29,7 +29,7 @@ public class EmployeeDetails {
 			if(result > 0){
 				System.out.println("Employee created");
 			}
-			
+			System.out.println("Database Connection is Closed");
 			connection.close();
 			
 		}catch (Exception e) {	e.printStackTrace();	}
@@ -48,6 +48,8 @@ public class EmployeeDetails {
 				System.out.println(emp_id+" Employee is updated");
 			else
 				System.out.println(emp_id+" Employee is not existing");
+			System.out.println("Database Connection is Closed");
+			connection.close();
 		
 		}catch (Exception e) {e.printStackTrace();}
 	}
@@ -65,6 +67,8 @@ public class EmployeeDetails {
 				System.out.println(emp_id + " employee is deleted");
 			else
 				System.out.println(emp_id + " employee is not existing");
+			System.out.println("Database Connection is Closed");
+			connection.close();
 
 		} catch (Exception e) { 	e.printStackTrace(); 	}
 
@@ -82,6 +86,8 @@ public class EmployeeDetails {
 				System.out.println(resultSet.getInt("emp_id")+"\t"+resultSet.getString("emp_name")+"\t"+resultSet.getDouble(3));
 			}
 			
+			System.out.println("Database Connection is Closed");
+			connection.close();
 		} catch (Exception e) { 	e.printStackTrace(); 	}
 
 	}
@@ -103,6 +109,9 @@ public class EmployeeDetails {
 				System.out.println(emp_id+" employee not found");
 			}
 						
+			System.out.println("Database Connection is Closed");
+			connection.close();
+			
 		} catch (Exception e) { 	e.printStackTrace(); 	}
 	}
 

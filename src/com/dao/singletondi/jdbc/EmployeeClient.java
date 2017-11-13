@@ -31,6 +31,8 @@ public class EmployeeClient {
 			salary = scanner.nextDouble();
 			
 			eDetails.addEmployee(emp_id, emp_name, salary);
+			
+			
 			break;
 		case 2:
 			System.out.println("Enter pno and price");
